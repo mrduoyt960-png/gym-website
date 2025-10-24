@@ -1,0 +1,185 @@
+
+:root {
+  --primary: #4a6bff;
+  --accent: #6c63ff;
+  --hover: #a2b2ff;
+  --dark-bg: rgba(26, 26, 46, 0.95);
+}
+
+/* 🧭 Navbar Base */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: rgba(15, 15, 30, 0.25);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--primary);
+}
+
+/* 🔽 Scroll Effect */
+.navbar.scrolled {
+  background: rgba(26, 26, 46, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 12px 0;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* 🔹 Layout */
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🔠 Logo */
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: white;
+   display: flex;             
+  align-items: center;       
+    
+}
+
+.logo-img {
+  width: 40px;       /* apni requirement ke hisaab se adjust karo */
+  height: auto;
+  margin-right: 50px;
+}
+.well {
+  color: var(--primary);
+}
+
+.nex {
+  color: var(--accent);
+}
+
+/* 🔗 Menu */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.4s ease;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* 🌈 Underline animation */
+.navbar-menu a:not(.btn):after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-menu a:not(.btn):hover:after,
+.navbar-menu a.active:after {
+  transform: scaleX(1);
+}
+
+.navbar-menu a.active {
+  color: var(--primary);
+}
+
+/* 🍔 Toggle Button */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* 🎛 Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(108, 99, 255, 0.5);
+}
+
+/* 📱 Mobile Menu */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(26, 26, 46, 0.97);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .navbar-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
