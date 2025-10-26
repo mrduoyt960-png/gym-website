@@ -34,10 +34,25 @@ const GymKey = () => {
             <p>
               GymKey is your digital passport to fitness freedom. Whether you're a gym owner or a fitness enthusiast, GymKey connects users with partner gyms, tracks workouts, and simplifies access—all from a single app.
             </p>
-            <div className="app-download">
-              <button className="btn btn-primary">Download for iOS</button>
-              <button className="btn btn-primary">Download for Android</button>
-            </div>
+          <div className="app-download">
+  <a
+    href="https://apps.apple.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Download for iOS
+  </a>
+  <a
+    href="https://play.google.com/store/apps/details?id=com.innovadorsolutions.gymkey"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Download for Android
+  </a>
+</div>
+
           </div>
           <div className="app-hero-image">
             <div className="phone-mockup">
@@ -243,8 +258,22 @@ const GymKey = () => {
           <h2>Unlock Your Fitness Potential</h2>
           <p>Join the GymKey community and experience fitness freedom like never before.</p>
           <div className="app-download">
-            <button className="btn btn-primary">Download for iOS</button>
-            <button className="btn btn-primary">Download for Android</button>
+            <a
+    href="https://apps.apple.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Download for iOS
+  </a>
+  <a
+    href="https://play.google.com/store/apps/details?id=com.innovadorsolutions.gymkey"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Download for Android
+  </a>
           </div>
         </div>
       </section>

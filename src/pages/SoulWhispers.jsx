@@ -36,8 +36,22 @@ const SoulWhispers = () => {
               SoulWhispers is a mindfulness and emotional wellness app designed to help users reconnect with their inner calm. Through guided meditations, reflective journaling, and AI-powered mood tracking, SoulWhispers nurtures mental clarity and emotional resilience in a fast-paced world.
             </p>
             <div className="app-download">
-              <button className="btn btn-primary">Download for iOS</button>
-              <button className="btn btn-primary">Download for Android</button>
+              <a 
+    href="https://apps.apple.com/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Download for iOS
+  </a>
+  <a 
+    href="https://play.google.com/store/apps/details?id=com.innovadorsolutions.soulwispers" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Download for Android
+  </a>
             </div>
           </div>
           <div className="app-hero-image">
@@ -234,8 +248,22 @@ const SoulWhispers = () => {
           <h2>Start Your Wellness Journey Today</h2>
           <p>Join thousands of users who have transformed their mental well-being with SoulWhispers.</p>
           <div className="app-download">
-            <button className="btn btn-primary">Download for iOS</button>
-            <button className="btn btn-primary">Download for Android</button>
+<a 
+    href="https://apps.apple.com/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Download for iOS
+  </a>
+  <a 
+    href="https://play.google.com/store/apps/details?id=com.innovadorsolutions.soulwispers" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Download for Android
+  </a>
           </div>
         </div>
       </section>
